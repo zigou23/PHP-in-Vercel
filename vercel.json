@@ -1,13 +1,7 @@
 {
   "functions": {
     "api/*.php": {"runtime": "vercel-php@0.4.0"},
-    "api/hitokoto/*.php": {"runtime": "vercel-php@0.4.0"},
-    "api/img/bing/*.php": {"runtime": "vercel-php@0.4.0"},
-    
-    // Can be list also directly 也可以直接列出
-    // "api/index.php": {
-    //   "runtime": "vercel-php@0.4.0"
-    // },
-    }
+    "api/hitokoto/index.php": {"runtime": "vercel-php@0.4.0"},
+    "api/img/bing/index.php": {"runtime": "vercel-php@0.4.0"}
   }
 }

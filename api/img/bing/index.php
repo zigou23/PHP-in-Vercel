@@ -27,4 +27,3 @@ if ($_GET['server'] === '1') {
 }else{
     header("Location: {$imgurl}");
 }
-?>

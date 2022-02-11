@@ -1,7 +1,5 @@
 {
-  "functions": {
-    "api/index.php": {
-      "runtime": "now-php@0.0.7"
-    }
-  }
+  "builds": [
+    { "src": "*.php", "use": "now-php@canary" }
+  ]
 }

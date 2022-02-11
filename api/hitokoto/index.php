@@ -1,5 +1,5 @@
 <?php
-header("Content-type: text/html; charset=utf-8"); 
+header('content-type: application/json');
 
 $path = dirname(__FILE__);
 
