@@ -1,12 +1,13 @@
 {
   "functions": {
-    "api/*.php": {
-      "runtime": "vercel-php@0.4.0"
+    "api/*.php": {"runtime": "vercel-php@0.4.0"},
+    "api/hitokoto/*.php": {"runtime": "vercel-php@0.4.0"},
+    "api/img/bing/*.php": {"runtime": "vercel-php@0.4.0"},
+    
+    // Can be list also directly 也可以直接列出
+    // "api/index.php": {
+    //   "runtime": "vercel-php@0.4.0"
+    // },
     }
-  },
-  "routes": [
-    { "src": "/(.*)",  "dest": "/api/index.php" }
-    { "src": "/(.*)",  "dest": "/api/hitokoto/index.php" }
-    { "src": "/(.*)",  "dest": "/api/img/bing/index.php" }
-  ]
+  }
 }
