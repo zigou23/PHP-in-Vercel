@@ -2,7 +2,7 @@
 $str = file_get_contents('https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=8');
 $str = json_decode($str,true);
 $arr = 0;
-// random随机的,random=1,随机生成8张图片的任意一张.默认今天
+// random随机的,random=1,随机生成8张图片的任意一张,默认今天
 if ($_GET['random'] === '1') {
     $arr  = mt_rand(0, 7);
     // echo "$arr";
