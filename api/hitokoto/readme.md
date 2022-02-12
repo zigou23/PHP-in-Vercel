@@ -2,7 +2,7 @@
 
 ### 接口地址
 
-https: //`your-domain`/hitokoto/index.php?*type*=hitokoto.txt&*encode*=js
+https: //`your-domain`/api/hitokoto/index.php?*type*=hitokoto.txt&*encode*=js
 
 `your-domain`: 
 
@@ -20,13 +20,13 @@ https: //`your-domain`/hitokoto/index.php?*type*=hitokoto.txt&*encode*=js
 
 1. encode=js api页面加载过慢会引起整个网页变慢
 ```html
-<script type="text/javascript" src="https://`your-domain`/hitokoto/index.php?encode=js"></script>
+<script type="text/javascript" src="https://`your-domain`/api/hitokoto/index.php?encode=js"></script>
 <p class="content"><script>zigouapi1()</script></p>
 ```
 2. encode=js2 api加载不影响页面
 ```html
 <span id="zigouapi1">:D 语录获取中...</span>
-<script src="https://`your-domain`/hitokoto/index.php?encode=js2" defer></script>
+<script src="https://`your-domain`/api/hitokoto/index.php?encode=js2" defer></script>
 ```
 
 
