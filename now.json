@@ -4,6 +4,7 @@
     { "src": "api/*.php", "use": "now-php@canary" },
     { "src": "api/hitokoto/*.php", "use": "now-php@canary" },
     { "src": "api/img/bing/*.php", "use": "now-php@canary" }
+    { "src": "api/user/*.php", "use": "now-php@canary" }
   ],
   "version": 2,
   "routes": [
