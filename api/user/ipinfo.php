@@ -10,5 +10,11 @@ function getRemoteIPAddress() {
     return $_SERVER['REMOTE_ADDR'];
 }
 echo '{"ip":"'.getRemoteIPAddress().'",';
+$web='https://ipinfo.io/'.getRemoteIPAddress();
+echo '"web":"'.$web.'","message":';
+
+$html= file_get_contents($web);
+echo $html .'}';
+
 // 获取ua
-echo '"ua":"'.$_SERVER['HTTP_USER_AGENT'].'"}';
+// echo '"ua"="'.$_SERVER['HTTP_USER_AGENT'].'"}';
