@@ -8,5 +8,5 @@ function getRemoteIPAddress() {
     }
     return $_SERVER['REMOTE_ADDR'];
 }
-echo '{"ip"="'.$_SERVER['REMOTE_ADDR'].'",';
+echo '{"ip"="'.getRemoteIPAddress().'",';
 echo '"ua"="'.$_SERVER['HTTP_USER_AGENT'].'"}';
