@@ -2,6 +2,14 @@
 
 This repository use with @juicyfx/vercel-examples
 
+
+
+> 因构建有12个限制，所以这只有一部分api :
+>
+> Build Failed
+>
+> No more than 12 Serverless Functions can be added to a Deployment on the Hobby plan. Create a team (Pro plan) to deploy more.
+
 > Tips: This is a private learning warehouse, you can use it according to the rules of [LICENSE](/LICENSE).
 
 
