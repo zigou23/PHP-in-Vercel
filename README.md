@@ -2,10 +2,8 @@
 
 This repository use with @juicyfx/vercel-examples
 
+Because building serverless functions has [12 limits](https://vercel.com/docs/concepts/limits/overview#general-limits) , only for long-term archiving.
 
-
-> 因构建有12个限制，所以这只有一部分api :
->
 > Build Failed
 >
 > No more than 12 Serverless Functions can be added to a Deployment on the Hobby plan. Create a team (Pro plan) to deploy more.
@@ -21,14 +19,13 @@ This repository use with @juicyfx/vercel-examples
 
 Bing每日一图：
 
-- 302跳转 https://php-zi.vercel.app/api/img/bing/index.php
+- 302跳转 https://php-zi.vercel.app/api/bingimg/index.php
   - 随机图 ?random=1
   - 指定图 ?value=(1-7) (注：默认value=0(~~知道有bug~~)
-  
   - 走服务器 ?server=1 (Notice:不建议使用
-- ~~不会跳转 https://php-zi.vercel.app/api/img/bing/2k.php~~
-  
-  - ~~一样(注：此链接走heroku服务器,不建议使用~~
+
+user
+- 由于vercel仅支持ipv4 所以暂时无法获取ipv6，前往 https://php-zi.vercel.app 查看
 
 ## web
 
@@ -36,7 +33,6 @@ https://`your-domain`/xxx.php
 
 `your-domain`: 
 
-  - ~~https://zigou-api.herokuapp.com  heroku服务器，部分运营商无法访问~~
   - https://php-zi.vercel.app vercel服务器
   - https://api.qsim.top 自己的
 
