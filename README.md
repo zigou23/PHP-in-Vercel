@@ -8,9 +8,10 @@
 <p align="center">一个<del>轻量、无后端</del>的PHP模块，<del>随便瞎编点，主要它美观嘛</del><br>注：vercel限制免费用户12 Serverless Functions, 也就是12个PHP File</p>
 
 <p align="center">
-    <a href="https://php-zi.vercel.app/"><img src="https://img.shields.io/github/commit-activity/m/zigou23/PHP-in-Vercel" alt="dev"></a>
-    <a href="https://php-zi.vercel.app/"><img src="https://img.shields.io/website?url=https%3A%2F%2Fphp-zi.vercel.app" alt="dev"></a>
-    <a href="https://github.com/zigou23/PHP-in-Vercel/blob/master/LICENSE"><img src="https://img.shields.io/github/license/zigou23/PHP-in-Vercel?color=FF5531" alt="MIT License"></a>
+    <a href="https://github.com/zigou23/PHP-in-Vercel/"><img src="https://img.shields.io/github/commit-activity/m/zigou23/PHP-in-Vercel" alt="commit-activity"></a>
+    <a href="https://php-zi.vercel.app/"><img src="https://badgen.net/badge/icon/vercel?icon=vercel&label" alt="vercel"></a>
+    <a href="https://php-zi.vercel.app/"><img src="https://img.shields.io/website?url=https%3A%2F%2Fphp-zi.vercel.app" alt="website"></a>
+    <a href="https://github.com/zigou23/PHP-in-Vercel/blob/master/LICENSE"><img src="https://img.shields.io/github/license/zigou23/PHP-in-Vercel?color=FF5531" alt="GPL3.0 License"></a>
 </p>
 
 ## 使用说明
