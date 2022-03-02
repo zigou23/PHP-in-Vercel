@@ -10,9 +10,9 @@
   <p>一个<del>轻量、无后端</del>的PHP模块，<del>随便瞎编点，主要它美观嘛</del><br>注：vercel限制免费用户12 Serverless Functions, 也就是12个PHP File</p>
 
 [![commit-activity](https://img.shields.io/github/commit-activity/m/zigou23/PHP-in-Vercel)](https://github.com/zigou23/PHP-in-Vercel)
-[![vercel](https://badgen.net/badge/icon/vercel?icon=vercel&label)](https://php-zi.vercel.app/)
-[![website](https://img.shields.io/website?url=https%3A%2F%2Fphp-zi.vercel.app)]()
+[![website](https://img.shields.io/website?url=https%3A%2F%2Fphp-zi.vercel.app&label=vercel%20website&logo=vercel)](https://php-zi.vercel.app/)
 [![GPL3.0 License](https://img.shields.io/github/license/zigou23/PHP-in-Vercel?color=FF5531)](https://github.com/zigou23/PHP-in-Vercel/blob/master/LICENSE)
+[![repo size](https://img.shields.io/github/repo-size/zigou23/php-in-vercel?color=FFAC3B)](https://github.com/zigou23/PHP-in-Vercel/archive/refs/heads/main.zip)
 
 
 [📘文档](https://github.com/zigou23/PHP-in-Vercel/#api%E6%8E%A5%E5%8F%A3) |
