@@ -29,7 +29,7 @@ else if (@$_GET['ua'] === '1')
     echo '{"ua":"'.$_SERVER['HTTP_USER_AGENT'].'"}';
 // 获取ip信息
 else if (@$_GET['ip'] === '1')
-    echo '{"ip":"'.getIP().'"}';
+    echo getIP();
 // 输出ipv4地址+ua
 else
     echo '{"ip":"'.getIP().'","ua":"'.$_SERVER['HTTP_USER_AGENT'].'"}';
