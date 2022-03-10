@@ -2,7 +2,7 @@
 // & -php无法识别，需转换成 %26 无解 php会在&处分割
   set_time_limit(1); //限制超时2s停止
   error_reporting(0);
-  $url = $_GET['url'];
+  $url = 'https://'.$_GET['url'];
   $web = file_get_contents($url);
   // $file = strlen($web);
   if(@$_GET['json'] === '1'){
