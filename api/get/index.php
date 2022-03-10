@@ -3,8 +3,7 @@
   // set_time_limit(1); //限制超时2s停止
   ini_set('max_execution_time', 1); //300 seconds = 5 minutes
   error_reporting(0);
-  echo '/* DO NOT USE IT!!! */ 
-';
+  echo "/* DO NOT USE IT!!! */\r\n";
   $url = 'http://'.$_GET['url'];
   $web = file_get_contents($url);
   // $file = strlen($web);
