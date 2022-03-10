@@ -4,7 +4,7 @@
   ini_set('max_execution_time', 1); //300 seconds = 5 minutes
   error_reporting(0);
   echo "/* DO NOT USE IT!!! */\r\n";
-  $url = 'http://'.$_GET['url'];
+  $url = 'https://'.$_GET['url'];
   $web = file_get_contents($url);
   // $file = strlen($web);
   if(@$_GET['json'] === '1'){
