@@ -52,7 +52,7 @@
   }
   </style>
 <!-- 背景颜色 -->
-  <script>
+  <!-- <script>
     var bodyBgs = [];
     bodyBgs[0] = "linear-gradient(to left bottom, hsl(158, 100%, 85%) 0%,hsl(65, 100%, 85%) 100%)";
     bodyBgs[1] = "linear-gradient(to left bottom, hsl(170, 100%, 85%) 0%,hsl(23, 100%, 85%) 100%)";
@@ -65,7 +65,7 @@
     bodyBgs[8] = "linear-gradient(0deg, rgba(102,201,255,.8), rgba(255,0,0,0) 70.71%),linear-gradient(90deg, rgba(102,254,194,.5), rgba(0,255,0,0) 70.71%),linear-gradient(180deg, rgba(211,87,254,.8), rgba(0,0,255,0) 70.71%),linear-gradient(336deg, rgba(270,198,119,.8), rgba(0,0,255,0) 70.71%)";
     var randomBgIndex = Math.round(Math.random() * 8);
     document.write('<style>body{background: ' + bodyBgs[randomBgIndex] + ' ; }</style>');
-  </script>
+  </script> -->
 
 </head>
 
@@ -74,7 +74,7 @@
     <div class="code">404<br><small>Not found</small></div>
     <div class="message" style="padding:10px">
       <a href="./" >Back to Home</a>
-    <script>
+    <!-- <script>
       // 随机文字表情
       var emojis = [];
       emojis[0] = "( '▿ ' )";
@@ -108,7 +108,7 @@
       emojis[28] = "(・ω< )★";
       var randomemojisIndex = Math.round(Math.random() * 28);
       document.write('<div>' + emojis[randomemojisIndex] + '</div>');
-    </script>
+    </script> -->
     </div>
   </div>
   <script>

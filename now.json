@@ -2,7 +2,6 @@
   "builds": [
     { "src": "*.php", "use": "now-php@canary" },
     { "src": "favicon.ico", "use": "now-php@canary" },
-    { "src": "api/*.php", "use": "now-php@canary" },
     { "src": "api/hitokoto/*.php", "use": "now-php@canary" },
     { "src": "api/bingimg/*.php", "use": "now-php@canary" },
     { "src": "api/user/*.php", "use": "now-php@canary" },
@@ -11,6 +10,6 @@
   "version": 2,
   "routes": [
     { "handle": "filesystem" },
-    { "src": "/(.*)", "status": 404, "dest": "/404.html" }
+    { "src": "/(.*)", "status": 404, "dest": "/404.php" }
   ]
 }
