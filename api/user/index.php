@@ -1,6 +1,6 @@
 <?php 
-function getIP() /*获取客户端IP地址*/ 
-{
+error_reporting(0); //不输出错误
+function getIP() {/*获取客户端IP地址*/ 
 if (@$_SERVER["HTTP_X_FORWARDED_FOR"]) 
 $ip = $_SERVER["HTTP_X_FORWARDED_FOR"]; 
 else if (@$_SERVER["HTTP_CLIENT_IP"]) 
@@ -17,22 +17,22 @@ else
 $ip = "0"; 
 return $ip; 
 }
-
-// ipinfo获取ip信息
-if (@$_GET['ipinfo'] === '1'){
-    $ip4web='https://ipinfo.io/'.getIP();
-    $html4= file_get_contents($ip4web);
-    echo $html4;
+if(is_array($_GET)&&count($_GET)>0){//判断是否有Get参数
+    if (@$_GET['onlyip'] === '1')// 获取ip信息
+        echo getIP();
+    // ipinfo获取ip信息
+    else if (@$_GET['ipinfo'] === '1'){
+        $ip4web='https://ipinfo.io/'.getIP();
+        $html4= file_get_contents($ip4web);
+        echo $html4;
+    }else if(isset($_GET["ip"])){
+        $ip4web='https://ipinfo.io/'.$_GET['ip'];
+        $html4= file_get_contents($ip4web);
+        echo $html4;
+    }
+}else{// 输出ipv4地址+ua
+    $result['ip'] = getIP();
+    $result['ua'] = $_SERVER['HTTP_USER_AGENT'];
+    $result['message'] = '?onlyip=1,ipinfo=1,ip=1.1.1.1';
+    echo json_encode($result);
 }
-// 获取网页ua
-else if (@$_GET['ua'] === '1')
-    echo '{"ua":"'.$_SERVER['HTTP_USER_AGENT'].'"}';
-// 获取ip信息
-else if (@$_GET['ip'] === '1')
-    echo getIP();
-// 输出ipv4地址+ua
-else
-    echo '{"ip":"'.getIP().'","ua":"'.$_SERVER['HTTP_USER_AGENT'].'"}';
-
-    
-
