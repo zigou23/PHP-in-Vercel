@@ -21,4 +21,4 @@ if(is_array($_GET)&&count($_GET)>0){//判断是否有Get参数
     }
   }
 }else
-  echo 'What would you like to do? Nothing in there!';
+  echo 'Nothing';
