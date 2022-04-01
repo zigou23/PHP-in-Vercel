@@ -36,12 +36,17 @@ if(is_array($_GET)&&count($_GET)>0){ // 判断是否有Get参数
             $html4= file_get_contents($ip4web);
             echo $html4;
         }
-    }elseif (strlen($_GET["ipt"]) >= 7 && strlen($_GET["ipt"]) <=15) { //是测试接口
-        $ip4web='https://p.ffvv.ml/https/ipinfo.io/widget/'.$_GET["ipt"];
+    }elseif (strlen($_GET["ipt"]) >= 7 && strlen($_GET["ipt"]) <=15 || @$_GET['ipt'] === '1') { //是测试接口
+        if (@$_GET['ipt'] == '1') {
+            $ip4web='https://p.ffvv.ml/https/prox.zigou23.tk/https/ipinfo.io/widget/';
+            $html4= file_get_contents($ip4web); // 输出
+            echo $html4;
+        }else{
+        $ip4web='https://p.ffvv.ml/https/prox.zigou23.tk/https/ipinfo.io/widget/'.$_GET["ipt"];
         $html4= file_get_contents($ip4web); // 输出
         echo $html4;
-    }
-    else{ //提示参数
+        }
+    }else{ //提示参数
         $result['msg'] = 'onlyip=1,ipinfo=1,ip=1.1.1.1,ipt=1.1.1.1/ASN(test)';
         echo json_encode($result);
     }
