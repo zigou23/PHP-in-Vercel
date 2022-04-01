@@ -17,7 +17,7 @@ else
 $ip = "0"; 
 return $ip; 
 }
-
+header('Content-Type: text/plain;charset=UTF-8');
 if(is_array($_GET)&&count($_GET)>0){ // 判断是否有Get参数
     if (@$_GET['onlyip'] === '1') // 获取ip信息
         echo getIP();
@@ -31,13 +31,18 @@ if(is_array($_GET)&&count($_GET)>0){ // 判断是否有Get参数
             $ip4web='https://ipinfo.io/'.getIP().$api; //是自己的用自己的接口，不是用通用接口
             $html4= file_get_contents($ip4web); // 输出
             echo $html4;
-        }else{
+        }else{ //处理ip=ip address 的情况
             $ip4web='https://ipinfo.io/'.$_GET['ip'].$api;
             $html4= file_get_contents($ip4web);
             echo $html4;
         }
-    }else{ //提示参数
-        $result['msg'] = 'onlyip=1,ipinfo=1,ip=1.1.1.1';
+    }elseif (strlen($_GET["ipt"]) >= 7 && strlen($_GET["ipt"]) <=15) { //是测试接口
+        $ip4web='https://p.ffvv.ml/https/ipinfo.io/widget/'.$_GET["ipt"];
+        $html4= file_get_contents($ip4web); // 输出
+        echo $html4;
+    }
+    else{ //提示参数
+        $result['msg'] = 'onlyip=1,ipinfo=1,ip=1.1.1.1,ipt=1.1.1.1/ASN(test)';
         echo json_encode($result);
     }
 }else{// 输出ipv4地址+ua
