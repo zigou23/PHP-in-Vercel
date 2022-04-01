@@ -36,14 +36,18 @@ if(is_array($_GET)&&count($_GET)>0){ // 判断是否有Get参数
             $html4= file_get_contents($ip4web);
             echo $html4;
         }
-    }elseif (strlen($_GET["ipt"]) >= 7 && strlen($_GET["ipt"]) <=15 || @$_GET['ipt'] === '1') { //是测试接口
-        if (@$_GET['ipt'] == '1') {
+    }elseif (strlen($_GET["ipt"]) >= 6 && strlen($_GET["ipt"]) <=15 || @$_GET['ipt'] === '1' || @$_GET['ipt'] === '2') { //是测试接口
+        if (@$_GET['ipt'] === '1') { // ipt=1 获取当前cf ip
             $ip4web='https://p.ffvv.ml/https/prox.zigou23.tk/https/ipinfo.io/widget/';
-            $html4= file_get_contents($ip4web); // 输出
+            $html4= file_get_contents($ip4web); 
             echo $html4;
-        }else{
+        }elseif (@$_GET['ipt'] === '2') { //ipt=2 获取当前用户ip
+            $ip4web='https://p.ffvv.ml/https/prox.zigou23.tk/https/ipinfo.io/widget/'.getIP();
+            $html4= file_get_contents($ip4web); 
+            echo $html4;
+        }else{ // ipt=asn或者ip地址
         $ip4web='https://p.ffvv.ml/https/prox.zigou23.tk/https/ipinfo.io/widget/'.$_GET["ipt"];
-        $html4= file_get_contents($ip4web); // 输出
+        $html4= file_get_contents($ip4web); 
         echo $html4;
         }
     }else{ //提示参数
