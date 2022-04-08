@@ -17,7 +17,8 @@ else
 $ip = "0"; 
 return $ip; 
 }
-header('Content-Type: text/plain;charset=UTF-8');
+// header('Content-Type: text/plain;charset=UTF-8');
+header('content-type: application/json');
 if(is_array($_GET)&&count($_GET)>0){ // 判断是否有Get参数
     // onlyip 获取ip信息
     if (@$_GET['onlyip'] === '1')
