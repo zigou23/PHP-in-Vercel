@@ -40,15 +40,16 @@ if(is_array($_GET)&&count($_GET)>0){ // 判断是否有Get参数
             $ip4web='https://p.ffvv.ml/https/prox.zigou23.tk/https/ipinfo.io/widget/';
         elseif (@$_GET['ipt'] === '1') //ipt=1 获取访问者的ip
             $ip4web='https://p.ffvv.ml/https/prox.zigou23.tk/https/ipinfo.io/widget/'.getIP();
-        else // ipt=asn或者ip地址
+        else // ipt=ipv4&ipv6&asn
             $ip4web='https://p.ffvv.ml/https/prox.zigou23.tk/https/ipinfo.io/widget/'.$_GET["ipt"];
-        $html4= file_get_contents($ip4web); 
+        $html4= file_get_contents($ip4web);
         echo $html4;
     //db-ip.com 的接口
-    }elseif(strlen($_GET["dbip"]) >= 6 && strlen($_GET["dbip"]) <=39 || @$_GET['dbip'] === '1'){
+    }elseif(strlen($_GET["dbip"]) >= 6 && strlen($_GET["dbip"]) <=39 || @$_GET['dbip'] === '1' || @$_GET['dbip'] === '2'){
         if(@$_GET['dbip'] === '1') // 获取访问者的ip
-            // $ip4web='https://api.db-ip.com/v2/p31e4d59ee6ad1a0b5cc80695a873e43a8fbca06/self?convertCurrencies';
             $ip4web='https://db-ip.com/demo/home.php?s='.getIP();
+        elseif(@$_GET['dbip'] === '2') //获取vercel ip
+            $ip4web='https://api.db-ip.com/v2/p31e4d59ee6ad1a0b5cc80695a873e43a8fbca06/self?convertCurrencies';
         else //ipv4&ipv6&asn
             $ip4web='https://db-ip.com/demo/home.php?s='.$_GET['dbip'];
         $html4= file_get_contents($ip4web); // 输出
