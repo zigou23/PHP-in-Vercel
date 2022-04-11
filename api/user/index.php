@@ -23,7 +23,7 @@ if(is_array($_GET)&&count($_GET)>0){ // 判断是否有Get参数
     // onlyip 获取ip信息
     if (@$_GET['onlyip'] === '1')
         echo getIP();
-    // ipinfo=1 || ipinfo的数值在1.1.1.1(7)到225.225.225.225(15)之间
+    // ipinfo=1 || ipinfo的数值在1.1.1.1(7)到225.225.225.225(15)ipv6之间
     elseif (@$_GET['ipinfo'] === '1' || strlen($_GET["ipinfo"]) >= 7 && strlen($_GET["ipinfo"]) <=39) {
         $api = '';
         if (@$_SERVER['HTTP_HOST'] == 'api.qsim.top') //判断是否为自己的网站
@@ -31,7 +31,7 @@ if(is_array($_GET)&&count($_GET)>0){ // 判断是否有Get参数
         if (@$_GET['ipinfo'] === '1')
             $ip4web='https://ipinfo.io/'.getIP().$api; //是自己的用自己的接口，不是用通用接口
         else //处理ipinfo=ip地址 的情况
-            $ip4web='https://ipinfo.io/'.$_GET['ip'].$api;
+            $ip4web='https://ipinfo.io/'.$_GET['ipinfo'].$api;
         $html4= file_get_contents($ip4web); // 输出
         echo $html4;
     //是测试接口 使用ipinfo源
