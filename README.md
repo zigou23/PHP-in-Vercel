@@ -42,14 +42,14 @@ Because building serverless functions has [12 limits](https://vercel.com/docs/co
 
 - 无参数会跳转本日壁纸
 - `random=1` 8张随机图
-- `value=(1-7)` 指定图  (注：默认value不能为0(~~知道有bug~~)
+- `value=(1-7)` 指定图  (注：value不能为0(~~知道有bug~~)
 - `server=1` 走服务器  (Notice:不建议使用
 
 3. 获取user信息 `https://php-zi.vercel.app/api/user/index.php`
 - tips: 由于vercel仅支持ipv4 所以暂时无法获取ipv6
-- `ipinfo=1&1.1.1.1` 获取ipinfo的信息,=1时为自己的ip信息,也可=IP地址
-- `dbip=1&1.1.1.1&ASN` 获取dbip的信息(较少),=1时为自己的ip信息,也可=IP地址或者ASN信息
-- `ipt=1&1.1.1.1&ASN` 注：此接口为ipinfo首页的接口,限制频率! 请勿滥用!
+- `ipinfo=1&1.1.1.1&` 获取ipinfo的信息,=1时为自己的ip信息,也可=IP地址(可以为ipv6
+- `dbip=1&ipv4&ipv6&ASN` 获取dbip的信息(较少),=1时为自己的ip信息,也可=IP地址或者ASN信息
+- `ipt=1&ipv4&ipv6&ASN` 注：此接口为ipinfo首页的接口,限制频率! 请勿滥用!
 
 ## web
 
