@@ -11,7 +11,7 @@ if(is_array($_GET)&&count($_GET)>0){//判断是否有Get参数
       if(@$_GET['json'] === '1'){ // JSON数值时
         $result['status'] = 200;
         $result['data'] = $web;
-        echo json_encode($result); //返回JSON数据
+        echo json_encode($result,JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE); //返回JSON数据
       }elseif ($type === 'png' || $type === 'webp') //if仅使用这几个类型
         echo $web;
       elseif ($type === 'js' || $type === 'css') {

@@ -56,10 +56,10 @@ if(is_array($_GET)&&count($_GET)>0){ // 判断是否有Get参数
         echo $html4;
     }else{ //提示参数
         $result['msg'] = 'onlyip=1,ipinfo=1/1.1.1.1(ipinfo.io),dbip=1(!slow)/1.1.1.1/ASN(db-ip.com),ipt=1/1.1.1.1/ASN(!test)';
-        echo json_encode($result);
+        echo json_encode($result,JSON_UNESCAPED_SLASHES);//防止反斜杠
     }
 }else{// 输出ipv4地址+ua
     $result['ip'] = getIP();
     $result['ua'] = $_SERVER['HTTP_USER_AGENT'];
-    echo json_encode($result);
+    echo json_encode($result,JSON_UNESCAPED_SLASHES);
 }
