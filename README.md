@@ -38,16 +38,18 @@ Because building serverless functions has [12 limits](https://vercel.com/docs/co
 
 - [参数](/api/hitokoto/readme.md)
 
-2. Bing每日一图：
+2. Bing每日一图： `https://php-zi.vercel.app/api/bingimg/index.php`
 
-- 302跳转 `https://php-zi.vercel.app/api/bingimg/index.php`
-  - 8张随机图 ?random=1
-  - 指定图 ?value=(1-7) (注：默认value=0(~~知道有bug~~)
-  - 走服务器 ?server=1 (Notice:不建议使用
+- 无参数会跳转本日壁纸
+- `random=1` 8张随机图
+- `value=(1-7)` 指定图  (注：value不能为0(~~知道有bug~~)
+- `server=1` 走服务器  (Notice:不建议使用
 
-3. user 
-- 由于vercel仅支持ipv4 所以暂时无法获取ipv6 `https://php-zi.vercel.app/api/user/index.php`
-- `index.php`替换成`ip.php`&`ipinfo.php` (正在建设..)
+3. 获取user信息 `https://php-zi.vercel.app/api/user/index.php`
+- tips: 由于vercel仅支持ipv4 所以暂时无法获取ipv6
+- `ipinfo=1&1.1.1.1&` 获取ipinfo的信息,=1时为自己的ip信息,也可=IP地址(可以为ipv6
+- `dbip=1&ipv4&ipv6&ASN` 获取dbip的信息(较少),=1时为自己的ip信息,也可=IP地址或者ASN信息
+- `ipt=1&ipv4&ipv6&ASN` 注：此接口为ipinfo首页的接口,限制频率! 请勿滥用!
 
 ## web
 
