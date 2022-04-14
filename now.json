@@ -5,7 +5,8 @@
     { "src": "api/hitokoto/*.php", "use": "now-php@canary" },
     { "src": "api/bingimg/*.php", "use": "now-php@canary" },
     { "src": "api/user/*.php", "use": "now-php@canary" },
-    { "src": "api/get/*.php", "use": "now-php@canary" }
+    { "src": "api/get/*.php", "use": "now-php@canary" },
+	{ "src": "api/qq/*.php", "use": "now-php@canary" }
   ],
   "version": 2,
   "routes": [
