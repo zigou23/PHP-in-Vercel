@@ -1,4 +1,9 @@
 <?php
+// 目前接口 
+// x: https://www.bing.com/hp/api/v1/carousel?format=json&ecount=20&efirst=0
+// 20d:https://cn.bing.com/hp/api/v1/carousel?format=json&ecount=20&efirst=0
+// 6+1d: https://cn.bing.com/hp/api/v1/imagegallery?format=json
+// 8d: https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=8
 $str = file_get_contents('https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=8');
 $str = json_decode($str,true);
 $arr = 0;
