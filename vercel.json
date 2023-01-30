@@ -1,6 +1,6 @@
 {
   "functions": {
-    "*.php": {"runtime": "vercel-php@0.5.2"},
+    "api/*.php": {"runtime": "vercel-php@0.5.2"},
     "api/hitokoto/*.php": {"runtime": "vercel-php@0.5.2"},
     "api/bingimg/index.php": {"runtime": "vercel-php@0.5.2"},
     "api/user/index.php": {"runtime": "vercel-php@0.5.2"},
@@ -8,7 +8,6 @@
     "api/qq/index.php": {"runtime": "vercel-php@0.5.2"}
   },
   "routes": [
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "status": 404, "dest": "/404.php" }
+    { "handle": "filesystem" }
   ]
 }
