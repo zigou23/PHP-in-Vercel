@@ -1,14 +1,13 @@
 {
-  "builds": [
-    { "src": "*.php", "use": "now-php@canary" },
-    { "src": "favicon.ico", "use": "now-php@canary" },
-    { "src": "api/hitokoto/*.php", "use": "now-php@canary" },
-    { "src": "api/bingimg/*.php", "use": "now-php@canary" },
-    { "src": "api/user/*.php", "use": "now-php@canary" },
-    { "src": "api/get/*.php", "use": "now-php@canary" },
-	{ "src": "api/qq/*.php", "use": "now-php@canary" }
-  ],
-  "version": 2,
+  "functions": {
+    "*.php": {"runtime": "now-php@0.0.7"},
+    "favicon.ico": {"runtime": "now-php@0.0.7"},
+    "api/hitokoto/*.php": {"runtime": "now-php@0.0.7"},
+    "api/bingimg/*.php": {"runtime": "now-php@0.0.7"},
+    "api/user/*.php": {"runtime": "now-php@0.0.7"},
+    "api/get/*.php": {"runtime": "now-php@0.0.7"},
+    "api/qq/*.php": {"runtime": "now-php@0.0.7"}
+  },
   "routes": [
     { "handle": "filesystem" },
     { "src": "/(.*)", "status": 404, "dest": "/404.php" }
