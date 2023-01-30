@@ -14,7 +14,7 @@ if (@$_GET['random'] === '1') {
 }
 
 // 参数值(0-7)，获取链接的第几个url
-$value = $_GET['value'];
+$value = @$_GET['value'];
 if ($value >= 1 && $value <= 7) {
     $arr = $value ;
 }
