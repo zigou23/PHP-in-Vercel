@@ -1,7 +1,7 @@
 {
   "functions": {
     "*.php": {"runtime": "vercel-php@0.5.2"},
-    "api/hitokoto/index.php": {"runtime": "vercel-php@0.5.2"},
+    "api/hitokoto/*.php": {"runtime": "vercel-php@0.5.2"},
     "api/bingimg/index.php": {"runtime": "vercel-php@0.5.2"},
     "api/user/index.php": {"runtime": "vercel-php@0.5.2"},
     "api/get/index.php": {"runtime": "vercel-php@0.5.2"},
