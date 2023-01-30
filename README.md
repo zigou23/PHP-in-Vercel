@@ -22,6 +22,8 @@
 </div>
 
 ## 使用说明
+此仓库参考 [vercel-community](https://github.com/vercel-community/php) / [vercel-examples](https://github.com/juicyfx/vercel-examples/tree/master/php)需要修改vercel-php@0.5.2 - PHP 8.1.x 
+
 This repository use with @juicyfx/vercel-examples
 
 Because building serverless functions has [12 limits](https://vercel.com/docs/concepts/limits/overview#general-limits) , only for long-term archiving.
