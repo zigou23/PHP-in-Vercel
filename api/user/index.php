@@ -27,7 +27,7 @@ if(is_array($_GET)&&count($_GET)>0){ // 判断是否有Get参数
     elseif (@$_GET['ipinfo'] === '1' || strlen($_GET["ipinfo"]) >= 7 && strlen($_GET["ipinfo"]) <=39) {
         $api = '';
         if (@$_SERVER['HTTP_HOST'] == 'api.qsim.top') //判断是否为自己的网站
-            $api = '/json?token=2b0823d323bd55'; //是自己的网站会加上token(私有)
+            $api = '/json?token=d1a20a89dea81f'; //是自己的网站会加上token(私有)
         if (@$_GET['ipinfo'] === '1')
             $ip4web='https://ipinfo.io/'.getIP().$api; //是自己的用自己的接口，不是用通用接口
         else //处理ipinfo=ip地址 的情况

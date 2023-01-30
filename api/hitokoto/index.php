@@ -27,11 +27,11 @@ if (isset($_GET['charset']) && !empty($_GET['charset'])) {
 
 // encode属性，默认encode=文本
 // encode=js 时
-if ($_GET['encode'] === 'js') {
+if (@$_GET['encode'] === 'js') {
     echo "function zigouapi1(){document.write('" . $content ."');}";
 
 // encode=js2 时，模仿的hitokoto，直接生成参数
-} else if ($_GET['encode'] === 'js2'){
+} else if (@$_GET['encode'] === 'js2'){
     echo "(function zigouapi1(){var zigouapi1='" . $content ."';var dom=document.querySelector('#zigouapi1');Array.isArray(dom)?dom[0].innerText=zigouapi1:dom.innerText=zigouapi1;})()";
 } else {
     echo $content;
