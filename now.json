@@ -1,12 +1,12 @@
 {
   "functions": {
-    "*.php": {"runtime": "now-php@0.0.7"},
+    "404.php": {"runtime": "now-php@0.0.7"},
     "favicon.ico": {"runtime": "now-php@0.0.7"},
-    "api/hitokoto/*.php": {"runtime": "now-php@0.0.7"},
-    "api/bingimg/*.php": {"runtime": "now-php@0.0.7"},
-    "api/user/*.php": {"runtime": "now-php@0.0.7"},
-    "api/get/*.php": {"runtime": "now-php@0.0.7"},
-    "api/qq/*.php": {"runtime": "now-php@0.0.7"}
+    "api/hitokoto/index.php": {"runtime": "now-php@0.0.7"},
+    "api/bingimg/index.php": {"runtime": "now-php@0.0.7"},
+    "api/user/index.php": {"runtime": "now-php@0.0.7"},
+    "api/get/index.php": {"runtime": "now-php@0.0.7"},
+    "api/qq/index.php": {"runtime": "now-php@0.0.7"}
   },
   "routes": [
     { "handle": "filesystem" },
