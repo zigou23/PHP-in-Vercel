@@ -60,7 +60,11 @@ Because building serverless functions has [12 limits](https://vercel.com/docs/co
   - https://php-zi.vercel.app vercel服务器
   - https://api.qsim.top 自己的
 
-
+<p align="center">
+  <a href="https://star-history.com/#Torantulino/auto-gpt&Date">
+    <img src="https://api.star-history.com/svg?repos=zigou23/PHP-in-Vercel&type=Date" alt="Star History Chart">
+  </a>
+</p>
 
 > 注：我的网站由无服务器构成，所以均较慢 如果hitokoto.txt里有不好的语句，欢迎[联系我](https://www.qsim.top)
 
